@@ -1,14 +1,11 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package view;
 
+import model.SuspectModel;
 import java.util.Scanner;
 
 /**
  *
- * @author HuszárFruzsinaAnna(S
+ * @author huszar.fruzsina
  */
 public class ConsoleView {
     private Scanner scanner;
@@ -17,7 +14,19 @@ public class ConsoleView {
         scanner = new Scanner(System.in);
     }
 
-    public void kiir(String uzenet) {
-        System.out.println(uzenet);
-    }    
+    public void write(String message) {
+        System.out.println(message);
+    }
+
+    public SuspectModel.Names guessing() {
+        write("Jelöld meg a bűnözőt (ANNA, BÉLA, CSABA, DÁVID): ");
+        while (true) {
+            String answer = scanner.nextLine().trim().toUpperCase();
+            try {
+                return SuspectModel.Names.valueOf(answer);
+            } catch (IllegalArgumentException e) {
+                write("Hibás input! Kérlek az alábbiak közül válassz: ANNA, BÉLA, CSABA, DÁVID");
+            }
+        }
+    }
 }

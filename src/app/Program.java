@@ -1,8 +1,8 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
- */
 package app;
+
+import controller.ConsoleController;
+import model.SuspectModel;
+import view.ConsoleView;
 
 /**
  *
@@ -21,6 +21,9 @@ public class Program {
         Ki a tettes? 3 állítás igaz, egy hazugság.
         
         */
+        
+        SuspectModel model = new SuspectModel();
+        ConsoleView view = new ConsoleView();
+        new ConsoleController(model, view);
     }
-    
 }
