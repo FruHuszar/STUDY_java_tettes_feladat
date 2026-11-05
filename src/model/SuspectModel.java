@@ -12,18 +12,18 @@ public class SuspectModel {
         CSABA,
         DÁVID
     }
-    private final Names thief;
+    private final Names THIEF;
 
     public SuspectModel() {
-        this.thief = Names.DÁVID;
+        this.THIEF = Names.DÁVID;
     }
 
     public Names getThief() {
-        return thief;
+        return THIEF;
     }
     
     public boolean Check (Names guess) {
-        return guess == thief;
+        return guess == THIEF;
     }
      
     /*Ládás feladat mintájára ellenőrzés: Pontosan 3 igaz állítás van-e. Ez itt nem fog működni Anna tippje miatt: 
@@ -33,20 +33,20 @@ public class SuspectModel {
     
     */    
     
-     public boolean annaTrue() {
-        return thief == Names.DÁVID; // Azzal a logikával hogy Dávid = Dávid Béla
+    public boolean annaTrue() {
+        return THIEF == Names.DÁVID; // Azzal a logikával hogy Dávid = Dávid Béla
     }
     
     public boolean belaTrue() {
-        return thief == Names.CSABA;
+        return THIEF == Names.CSABA;
     }
     
     public boolean csabaTrue() {
-        return thief != Names.BÉLA;
+        return THIEF != Names.BÉLA;
     }
     
     public boolean davidTrue() {
-        return thief != Names.CSABA;
+        return THIEF != Names.CSABA;
     }
 
     public boolean checkSumTrue() {

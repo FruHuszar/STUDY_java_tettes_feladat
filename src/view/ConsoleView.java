@@ -19,7 +19,7 @@ public class ConsoleView {
     }
 
     public SuspectModel.Names guessing() {
-        write("Jelöld meg a bűnözőt (ANNA, BÉLA, CSABA, DÁVID): ");
+        write("Jelöld meg a tolvajt (ANNA, BÉLA, CSABA, DÁVID): ");
         while (true) {
             String answer = scanner.nextLine().trim().toUpperCase();
             try {
